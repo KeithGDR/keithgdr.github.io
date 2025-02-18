@@ -1,0 +1,15 @@
+{
+	"short_name": "keithgdr.github.io",
+	"name": "KeithGDR",
+	"icons": [
+	{
+		"src":"",
+		"sizes": "",
+		"type": ""
+	}
+	],
+	"start_url": "https://keithgdr.github.io/",
+	"background_color": "#000000",
+	"Theme_color": "#000000",
+	"display": "browser"
+}
