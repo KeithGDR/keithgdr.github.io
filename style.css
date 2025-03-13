@@ -1,21 +1,33 @@
 :root {
-	--main-font: "Roboto Mono", monospace;
+	--main-font: "Jetbrains Mono", monospace;
 	--main-color: #dcdcdc;
-	--secondary-color: #292929;
+	--secondary-color: #000000;
 	--font-small-mobile: 14px;
 }
 
 /* -- Fonts -- */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jetbrains+Mono:wght@300&display=swap");
 
 /* -- Body -- */
 body {
-	background-color: #1c1c1c;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	z-index: -1;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
 }
 
 /* -- Main -- */
@@ -32,8 +44,8 @@ main {
 	width: 100%;
 	padding: 5px 5px;
 	margin: 5px 20px;
-	background: #2a2a2a;
-	border: 2px solid black;
+	background: #000000;
+	border: 2px solid rgb(200, 200, 200);
 }
 
 /* -- Sub Container - Main -- */
@@ -43,12 +55,15 @@ main {
 	height: 50%;
 	max-width: 250px;
 	margin-top: 5px;
+	border: 1px solid rgb(200, 200, 200);
 }
 
-/* -- Title, Description, About-Me -- */
-.title,
-.description,
-.about-me {
+picture:has(img) source {
+    display: none;
+}
+
+/* -- Title -- */
+.title {
 	color: var(--main-color);
 	font-family: var(--main-font);
 	margin-bottom: 25px;
@@ -65,13 +80,7 @@ main {
 	color: inherit;
 }
 
-/* -- About-Me -- */
-.about-me {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 20px;
-}
-
+/* -- Splitter -- */
 .splitter {
 	border: 0;
 	height: 1px;
@@ -91,28 +100,13 @@ main {
 	margin: 20px 0;
 }
 
-/* -- Socials -- */
-.tooltip {
-	position: absolute;
-	bottom: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: #333;
-	color: #fff;
-	padding: 5px;
-	border-radius: 5px;
-	margin-bottom: 5px;
-	font-size: 12px;
-}
-
 /* -- Buttons -- */
 .button {
-	padding: 5px 10px;
+	padding: 5px 8px;
 	background-color: var(--secondary-color);
 	border-radius: 20px;
 	position: relative;
 	display: inline-block;
-	margin-bottom: 5px;
 	vertical-align: bottom;
 	transition: all 200ms ease-in-out;
 	color: var(--main-color);
