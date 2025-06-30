@@ -2,19 +2,13 @@
 	--main-font: "Jetbrains Mono", monospace;
 	--main-color: #e0e0e0;
 	--secondary-color: #121212;
-	--accent-color: #00aaff;
 	--font-small-mobile: 14px;
 }
-
-/* -- Fonts -- */
-@import url("https://fonts.googleapis.com/css2?family=Jetbrains+Mono:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
 /* -- Body -- */
 body {
 	margin: 0;
 	padding: 0;
-	min-height: 100vh;
 	overflow-y: auto;
 	background: none;
 }
@@ -26,8 +20,7 @@ body::before {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background: url('images/background.webp') no-repeat center center fixed;
-	background-size: cover;
+	background-color: #000000;
 	filter: blur(8px);
 	z-index: -1;
 }
@@ -41,8 +34,8 @@ main {
 	text-align: center;
 }
 
-/* -- Sub Container -- */
-.sub-container {
+/* -- Container -- */
+.container {
 	width: 100%;
 	max-width: 1200px;
 	padding: 30px;
@@ -52,20 +45,6 @@ main {
 	border-radius: 12px;
 	box-sizing: border-box;
 	text-align: center;
-}
-
-/* -- Sub Container - Main -- */
-/* -- Logo -- */
-.logo {
-	width: 100%;
-	height: 50%;
-	max-width: 250px;
-	margin-top: 5px;
-	border: 1px solid rgb(200, 200, 200);
-}
-
-picture:has(img) source {
-    display: none;
 }
 
 /* -- Title -- */
@@ -94,14 +73,6 @@ picture:has(img) source {
 	color: inherit;
 }
 
-.tagline {
-	color: var(--main-color);
-	font-family: 'Inter', sans-serif;
-	font-size: 1.2em;
-	margin: 10px 0 0 0;
-	opacity: 0.9;
-}
-
 /* -- Splitter -- */
 .splitter {
 	border: 0;
@@ -117,41 +88,11 @@ picture:has(img) source {
 	opacity: 0.5;
 }
 
-/* -- Description -- */
-.description {
-	color: var(--main-color);
-	font-family: var(--main-font);
-	text-align: center;
-	font-size: 1.2em;
-	margin: 20px 0;
-}
-
-/* -- Socials Title -- */
-.socials-title {
-	color: var(--main-color);
-	font-family: var(--main-font);
-	text-align: center;
-}
-
 /* -- Socials -- */
 .socials {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 20px 0;
-}
-
-/* -- Commission Title -- */
-.commission-title {
-	color: var(--main-color);
-	font-family: var(--main-font);
-	text-align: center;
-}
-
-.commission-title a:link,
-.commission-title a:visited {
-	color: inherit;
-	text-decoration: none;
 }
 
 /* -- Buttons -- */
@@ -175,114 +116,6 @@ picture:has(img) source {
 	cursor: pointer;
 }
 
-/* -- Child - Projects -- */
-.projects {
-	font-family: var(--main-font);
-	padding: 2%;
-	display: flex;
-	justify-content: center;
-}
-.projects a:link,
-a:visited {
-	color: var(--main-color);
-	text-decoration: none;
-}
-.projects a:hover {
-	color: #ffffff;
-	text-decoration: underline;
-	color: var(--accent-color);
-}
-.projects a:active {
-	color: var(--main-color);
-	text-decoration: underline;
-}
-
-/* -- Projects Grid -- */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-@media screen and (max-width: 900px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.card {
-    background-color: #1c1c1c;
-    border: 1px solid #444;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s ease-in-out;
-    width: 100%;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.card:hover {
-	transform: scale(1.02);
-	border-color: var(--accent-color);
-}
-
-.card a {
-    text-decoration: none;
-}
-
-.card a:hover {
-    text-decoration: none;
-}
-
-.card-title {
-    color: var(--main-color);
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding: 12px;
-    margin: 0;
-    text-align: center;
-    transition: color 0.2s ease-in-out;
-}
-
-.card:hover .card-title {
-    color: var(--accent-color);
-}
-
-/* -- Child - Footer -- */
-.footer {
-	color: var(--main-color);
-	text-decoration: none;
-	font-family: var(--main-font);
-}
-.footer a:link,
-a:visited {
-	color: var(--main-color);
-	text-decoration: none;
-}
-.footer a:hover {
-	color: #ffffff;
-	text-decoration: underline;
-}
-.footer a:active {
-	color: var(--main-color);
-	text-decoration: underline;
-}
-
 /* -- Scrollbar -- */
 
 /* Firefox */
@@ -304,11 +137,6 @@ a:visited {
 	background-color: var(--main-color);
 	border-radius: 5px;
 	border: 0px none #ffffff;
-}
-
-/* -- Separator -- */
-hr.solid {
-	border-top: 1px solid rgb(255, 255, 255);
 }
 
 /* -- Scrollbar -- */
@@ -335,228 +163,4 @@ hr.solid {
 
 .button:hover img {
 	transform: scale(1.2);
-}
-
-/* -- Section Spacing -- */
-section {
-    margin: 5px 0;
-}
-
-/* -- Profile Section -- */
-.profile-section {
-    margin-bottom: 20px;
-}
-
-/* -- Section Header -- */
-.section-header {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-/* -- Section Titles -- */
-.section-title {
-    color: var(--main-color);
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6em;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.5px;
-    margin: 0;
-    padding: 0;
-}
-
-/* -- Socials Section -- */
-.socials-section {
-    margin: 10px 0;
-}
-
-/* -- Commission Section -- */
-.commission-section {
-    margin: 10px 0 0 0;
-}
-
-/* -- Commission Link -- */
-.commission-link {
-    display: inline-block;
-    transition: transform 0.2s ease;
-}
-
-.commission-link:hover {
-    transform: scale(1.05);
-}
-
-/* -- Info Section -- */
-.info-section {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    margin-top: 12px;
-}
-
-.info-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.info-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-color);
-}
-
-.info-card h3 {
-    color: var(--accent-color);
-    font-family: 'Inter', sans-serif;
-    font-size: 1.2em;
-    margin: 0 0 15px 0;
-    font-weight: 500;
-}
-
-.info-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.info-card li {
-    color: var(--main-color);
-    font-family: 'Inter', sans-serif;
-    margin: 8px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.info-card li:before {
-    content: "•";
-    color: var(--accent-color);
-    position: absolute;
-    left: 0;
-}
-
-/* -- Contact Section -- */
-.contact-section {
-    margin: 30px 0 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 10px;
-    padding: 30px 20px 20px 20px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-section .section-header {
-    justify-content: center;
-    margin-bottom: 0;
-}
-
-.contact-text {
-    color: var(--main-color);
-    font-family: 'Inter', sans-serif;
-    font-size: 1.15em;
-    margin: 0 0 18px 0;
-    text-align: center;
-}
-
-.contact-text a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.contact-text a:hover {
-    opacity: 0.8;
-}
-
-.contact-email {
-    display: inline-flex;
-    align-items: center;
-    background: var(--accent-color);
-    color: #fff;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
-    padding: 10px 22px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 1.1em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: background 0.2s, box-shadow 0.2s;
-    margin-top: 5px;
-}
-
-.contact-email:hover {
-    background: #008ecc;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-}
-
-.email-icon {
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-
-@media screen and (max-width: 768px) {
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.commission-slots {
-    display: inline-flex;
-    align-items: center;
-    background: var(--accent-color);
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding: 7px 18px;
-    border-radius: 20px;
-    margin: 10px 0 0 0;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    gap: 8px;
-}
-
-.slots-icon {
-    font-size: 1.2em;
-    margin-right: 6px;
-}
-
-.slots-count {
-    font-weight: 700;
-    margin-left: 4px;
-}
-
-.contact-discord {
-    color: var(--main-color);
-    font-family: 'Inter', sans-serif;
-    font-size: 1em;
-    margin: 10px 0 0 0;
-    text-align: center;
-    opacity: 0.85;
-}
-
-.discord-name {
-    color: var(--accent-color);
-    font-weight: 600;
-    font-family: 'Inter', monospace;
-    letter-spacing: 0.5px;
 }
